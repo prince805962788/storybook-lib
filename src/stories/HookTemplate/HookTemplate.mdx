@@ -1,0 +1,26 @@
+import { Meta } from '@storybook/blocks';
+
+import * as HookTemplateStories from './HookTemplate.stories';
+
+<Meta of={HookTemplateStories} />
+
+# useTimeout
+
+```tsx
+import React from 'react';
+import { useTimeout } from '@/packages';
+
+const useTimeoutExample = () => {
+  const [value, setValue] = useState(0);
+  const delaySet = useTimeout(() => {
+    setValue(value + 1);
+  }, 3000);
+
+  return (
+    <div>
+      delay 3s：<button onClick={() => delaySet}>+1</button>
+      <p>Hook Result: {value}</p>
+    </div>
+  );
+};
+```

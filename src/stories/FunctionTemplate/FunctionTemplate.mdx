@@ -1,0 +1,22 @@
+import { Meta } from '@storybook/blocks';
+
+import * as FunctionTemplateStories from './FunctionTemplate.stories';
+
+<Meta of={FunctionTemplateStories} />
+
+# counter
+
+```tsx
+import React from 'react';
+import { counter } from '@/packages';
+
+const counterExample = () => {
+  const result = counter(2, 4);
+
+  return (
+    <div>
+      <p>counter Result: {result}</p>
+    </div>
+  );
+};
+```

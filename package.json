@@ -1,0 +1,66 @@
+{
+  "name": "react-lib-template",
+  "private": false,
+  "version": "0.0.0",
+  "description": "组件库模板",
+  "type": "module",
+  "module": "dist/index.es.js",
+  "main": "dist/index.es.js",
+  "types": "dist/packages/index.d.ts",
+  "files": [
+    "dist/"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vitest run && vite build",
+    "test": "vitest",
+    "preview": "vite preview",
+    "storybook": "storybook dev -p 7777",
+    "build-storybook": "storybook build",
+    "f2elint-scan": "f2elint scan",
+    "f2elint-fix": "f2elint fix",
+    "prepare": "husky install",
+    "tsc": "tsc --noEmit",
+    "prepublishOnly": "vitest run && pnpm run build"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@rollup/plugin-typescript": "^11.1.1",
+    "@storybook/addon-docs": "^7.0.20",
+    "@storybook/addon-essentials": "^7.0.11",
+    "@storybook/addon-interactions": "^7.0.11",
+    "@storybook/addon-links": "^7.0.11",
+    "@storybook/blocks": "^7.0.11",
+    "@storybook/builder-vite": "^7.0.11",
+    "@storybook/react": "^7.0.11",
+    "@storybook/react-vite": "^7.0.11",
+    "@testing-library/react": "^14.0.0",
+    "@testing-library/react-hooks": "^8.0.1",
+    "@types/node": "^18.16.17",
+    "@types/react": "^18.2.11",
+    "@types/react-dom": "^18.2.4",
+    "@vitejs/plugin-react-swc": "^3.3.2",
+    "eslint-plugin-storybook": "^0.6.12",
+    "jsdom": "^22.1.0",
+    "prop-types": "^15.8.1",
+    "storybook": "^7.0.11",
+    "typescript": "^5.1.3",
+    "vite": "^4.3.9",
+    "vitest": "^0.32.0",
+    "vite-plugin-compression": "^0.5.1",
+    "f2elint": "^2.2.1",
+    "husky": "^8.0.3"
+  },
+  "publishConfig": {
+    "registry": "http://192.168.3.110:8081/repository/npm-private"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "f2elint commit-file-scan",
+      "commit-msg": "f2elint commit-msg-scan"
+    }
+  }
+}

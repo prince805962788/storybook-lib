@@ -1,0 +1,11 @@
+node_modules/
+build/
+storybook-static/
+dist/
+coverage/
+es/
+lib/
+**/*.min.css
+**/*-min.css
+**/*.bundle.css
+

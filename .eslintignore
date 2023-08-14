@@ -1,0 +1,10 @@
+build/
+storybook-static/
+coverage/
+dist/
+es/
+lib/
+node_modules/
+**/*.min.js
+**/*-min.js
+**/*.bundle.js
